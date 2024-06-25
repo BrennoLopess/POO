@@ -1,0 +1,19 @@
+public class Programa {
+    private Persistencia persistencia;
+
+    public Programa(Persistencia persistencia) {
+        this.persistencia = persistencia;
+    }
+
+    public void executarPersistencia() {
+        persistencia.executar();
+    }
+
+    public static void main(String[] args) {
+        Programa programaJDBC = new Programa(new PersistenciaJDBC());
+        programaJDBC.executarPersistencia();
+
+        Programa programaJPA = new Programa(new PersistenciaJPA());
+        programaJPA.executarPersistencia();
+    }
+}
