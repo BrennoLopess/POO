@@ -1,0 +1,15 @@
+public class PersistenciaJDBC implements Persistencia {
+    @Override
+    public void executar() {
+        System.out.println("Executando com JDBC");
+        // Código específico JDBC aqui
+    }
+}
+
+public class PersistenciaJPA implements Persistencia {
+    @Override
+    public void executar() {
+        System.out.println("Executando com JPA");
+        // Código específico JPA aqui
+    }
+}
