@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class GerenciadorDeProdutos {
+    private List<Produto> produtos;
+
+    public GerenciadorDeProdutos() {
+        produtos = new ArrayList<>();
+    }
+
+    public void adicionarProduto(Produto produto) {
+        produtos.add(produto);
+    }
+
+    public boolean removerProduto(Produto produto) {
+        return produtos.remove(produto);
+    }
+
+    public Produto buscarProduto(String descricao) {
+        for (Produto produto : produtos) {
+            if (produto.getDescricao().equalsIgnoreCase(descricao)) {
+                return produto;
+            }
+        }
+        return null;
+    }
+
+    public List<Produto> listarProdutos() {
+        return produtos;
+    }
+}
