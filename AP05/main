@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        GerenciadorDeProdutos gerente = new GerenciadorDeProdutos();
+
+        // Adicionando produtos
+        gerente.adicionarProduto(new Produto("Informática", "Laptop Gamer", 2.5, 10, "kg"));
+        gerente.adicionarProduto(new Produto("Limpeza", "Detergente", 1.0, 30, "litro"));
+
+        // Listando produtos
+        System.out.println("Produtos cadastrados:");
+        for (Produto produto : gerente.listarProdutos()) {
+            System.out.println(produto);
+        }
+    }
+}
